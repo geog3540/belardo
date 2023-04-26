@@ -19,7 +19,7 @@
   <script src="https://d3js.org/queue.v1.min.js"></script>
   <script src="https://d3js.org/colorbrewer.v1.min.js"></script>
 
-  <title>An Animated Choropleth Map of U.S. Unemployment by County</title>
+  <title>An Animated Choropleth Map of U.S. Drinking Habits</title>
 </head>
 
 <body>
@@ -80,19 +80,19 @@
         </ol>
         <script>
 
-        var topoJSONFile = "data/us-10m.v1.json";
+        var topoJSONFile = "data/final.json";
         //enter the name of the feature or geometry collection within the topoJSONFile
         // for example, for the default dataset us.objects.counties, enter counties
-        var featureCollection = "counties";
-        var csvFile = "data/unemployment_by_county_year.csv";
-        var attributeAlias = "Unemployment Rate (%)";
+        var featureCollection = "NAME";
+        var csvFile = "data/Alcohol_Consumption.csv";
+        var attributeAlias = "All_beverages";
 
         // enter the minimum and maximum values of the attribute over years
         // one legend is created based on equal interval classification for all years.
         var min = 0, max = 20;
 
         //enter the beginning year or date/time of animation.
-        var beginTime = 1990, endTime = 2017;
+        var beginTime = 1977, endTime = 2016;
 
         // width and height of map frame
         var height = 600;
