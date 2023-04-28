@@ -19,7 +19,7 @@
   <script src="https://d3js.org/queue.v1.min.js"></script>
   <script src="https://d3js.org/colorbrewer.v1.min.js"></script>
 
-  <title>An Animated Choropleth Map of U.S. Beer Consumption by State</title>
+  <title>An Animated Choropleth Map of Total Alcohol Consumption by State</title>
 </head>
 
 <body>
@@ -74,18 +74,18 @@
         <svg width="960" height="600"></svg>
         <h3 id="using-the-map">Using the Map</h3>
         <ol>
-          <li>The map will animate automatically to show unemployment rates by county from 1990 to 2017.</li>
+          <li>The map will animate automatically to show unemployment rates by county from 1977 to 2016.</li>
           <li>At any point, you can hover over the year label (on the right side) to stop the animation.  Moving your cursor horizontally over the year label will automatically update the year that is shown on the choropleth (move left to decrease the year, right to increase the year).</li>
           <li>Hover over a county to see a tooltip providing the county name and the unemployment rate in that year.</li>
         </ol>
         <script>
 
-        var topoJSONFile = "data/beer.json";
+        var topoJSONFile = "data/total_alc.json";
         //enter the name of the feature or geometry collection within the topoJSONFile
         // for example, for the default dataset us.objects.counties, enter counties
-        var featureCollection = "GEOID";
-        var csvFile = "data/Beer.csv";
-        var attributeAlias = "Beer Consumption (%)";
+        var featureCollection = "NAME";
+        var csvFile = "data/Total_alc.csv";
+        var attributeAlias = "Total Alcohol Consumption (%)";
 
         // enter the minimum and maximum values of the attribute over years
         // one legend is created based on equal interval classification for all years.
